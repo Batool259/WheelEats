@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Kontakt</h2>
+
+<p>Wenn du Feedback oder Fragen hast, kannst du uns hier kontaktieren.</p>
+
+<form>
+    <label>Name:</label><br>
+    <input type="text" placeholder="Dein Name"><br><br>
+
+    <label>E-Mail:</label><br>
+    <input type="email" placeholder="dein@email.de"><br><br>
+
+    <label>Nachricht:</label><br>
+    <textarea placeholder="Deine Nachricht..." rows="5"></textarea><br><br>
+
+    <button>Senden</button>
+</form>
+
+{% endblock %}
