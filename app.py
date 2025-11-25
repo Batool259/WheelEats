@@ -69,5 +69,25 @@ def index():
         districts=districts,
     )
 
+
+@app.route("/restaurants")
+def restaurants_page():
+    return render_template("restaurants.html", restaurants=restaurants)
+
+@app.route("/about")
+def about_page():
+    return render_template("about.html")
+
+@app.route("/contact")
+def contact_page():
+    return render_template("contact.html")
+
+@app.route("/add")
+def add_page():
+    return render_template("add.html")
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
