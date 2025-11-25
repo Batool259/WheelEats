@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>WheelEats – Barrierefreie Restaurants</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>WheelEats</h1>
+        <p>Finde barrierefreie Restaurants auf einen Blick</p>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <small>© 2025 WheelEats</small>
+    </footer>
+
+</body>
+</html>
