@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Neuen Ort hinzufügen</h2>
+
+<p>Hier kannst du ein neues barrierefreies Restaurant eintragen.</p>
+
+<form method="post">
+    <label>Name des Restaurants:</label><br>
+    <input type="text" name="name"><br><br>
+
+    <label>Adresse:</label><br>
+    <input type="text" name="address"><br><br>
+
+    <label>Barrierefreiheits-Merkmale:</label><br>
+    <input type="checkbox" name="features" value="step_free"> Stufenloser Eingang<br>
+    <input type="checkbox" name="features" value="toilet"> Barrierefreies WC<br>
+    <input type="checkbox" name="features" value="spacious"> Geräumiger Innenraum<br><br>
+
+    <button type="submit">Speichern</button>
+</form>
+
+{% endblock %}
