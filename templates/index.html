@@ -1,12 +1,76 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Restaurants (Beispiele)</h2>
+<section class="hero">
+    <h2>Finde dein barrierefreies Restaurant in Berlin</h2>
+    <p>Suche nach Name, Adresse oder Küche und filtere nach Stadtteil und Barrierefreiheitsmerkmalen.</p>
+</section>
 
-<ul>
-    <li>Restaurant Sonnenschein – barrierefreier Eingang</li>
-    <li>Café Horizonte – rollstuhlgerechte Toilette</li>
-    <li>Pizzeria Bella Italia – ebenerdiger Zugang</li>
-</ul>
+<section class="filters">
+    <form method="get" class="filter-form">
+        <div class="filter-group">
+            <label for="q">Suche</label>
+            <input
+                type="text"
+                id="q"
+                name="q"
+                value="{{ q }}"
+                placeholder="Restaurant, Adresse oder Küche">
+        </div>
 
+        <div class="filter-group">
+            <label for="district">Stadtteil</label>
+            <select id="district" name="district">
+                <option value="">Alle Stadtteile</option>
+                {% for d in districts %}
+                    <option value="{{ d }}" {% if d == district %}selected{% endif %}>{{ d }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="feature">Barrierefreiheit</label>
+            <select id="feature" name="feature">
+                <option value="">Alle Merkmale</option>
+                <option value="step_free" {% if feature == "step_free" %}selected{% endif %}>Stufenloser Eingang</option>
+                <option value="toilet" {% if feature == "toilet" %}selected{% endif %}>Barrierefreies WC</option>
+                <option value="spacious" {% if feature == "spacious" %}selected{% endif %}>Geräumiger Innenraum</option>
+            </select>
+        </div>
+
+        <button type="submit" class="primary-btn">Filter anwenden</button>
+    </form>
+</section>
+
+<section>
+    <h3>Passende Restaurants ({{ restaurants|length }})</h3>
+
+    {% if restaurants %}
+        <ul class="restaurant-list">
+            {% for r in restaurants %}
+                <li class="restaurant-card">
+                    <h4>{{ r.name }}</h4>
+                    <p class="address">{{ r.address }}</p>
+                    <p class="meta">{{ r.district }} · {{ r.cuisine }}</p>
+
+                    <p class="features">
+                        {% if "step_free" in r.features %}
+                            🧑‍🦽 Stufenloser Eingang
+                        {% endif %}
+                        {% if "toilet" in r.features %}
+                            · 🚻 Barrierefreies WC
+                        {% endif %}
+                        {% if "spacious" in r.features %}
+                            · 📏 Geräumiger Innenraum
+                        {% endif %}
+                    </p>
+
+                    <button class="secondary-btn">Details ansehen</button>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Keine Restaurants gefunden. Bitte Filter anpassen.</p>
+    {% endif %}
+</section>
 {% endblock %}
