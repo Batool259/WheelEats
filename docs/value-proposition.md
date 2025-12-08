@@ -18,18 +18,18 @@ nav_order: 1
 
 ## The problem
 
-[Menschen mit Mobilitätseinschränkungen haben oft Schwierigkeiten, barrierefreie Restaurants oder Cafés zu finden. Bestehende Apps liefern selten verlässliche Informationen über Rollstuhlgerechtigkeit oder Zugänglichkeit.]
+Menschen mit Mobilitätseinschränkungen haben oft Schwierigkeiten, barrierefreie Restaurants oder Cafés zu finden. Bestehende Apps liefern selten verlässliche Informationen über Rollstuhlgerechtigkeit oder Zugänglichkeit.
 
 ## Our solution
 
-[WheelEats ist eine Plattform, die barrierefreie Restaurants anzeigt, bewertet und leicht bedienbar ist. Nutzer können Bewertungen und Fotos hochladen, um anderen zu helfen.]
+WheelEats ist eine Plattform, die barrierefreie Restaurants anzeigt, bewertet und leicht bedienbar ist. Nutzer können Bewertungen und Fotos hochladen, um anderen zu helfen.
 
 ## Target user
 
-[
+
 - Rollstuhlfahrer*innen und Menschen mit eingeschränkter Mobilität
 - Familien und Begleitpersonen
-- Gastronom*innen, die ihre Barrierefreiheit transparent zeigen möchten]
+- Gastronom*innen, die ihre Barrierefreiheit transparent zeigen möchten
 
 ## Customer journey
 
