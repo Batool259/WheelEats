@@ -26,7 +26,8 @@ nav_order: 1
 
 ## Target user
 
-[- Rollstuhlfahrer*innen und Menschen mit eingeschränkter Mobilität
+[
+- Rollstuhlfahrer*innen und Menschen mit eingeschränkter Mobilität
 - Familien und Begleitpersonen
 - Gastronom*innen, die ihre Barrierefreiheit transparent zeigen möchten]
 
